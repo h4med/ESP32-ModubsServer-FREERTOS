@@ -12,7 +12,7 @@
 /**
  * ADC input pin that is used to read out the CT sensor
  */
-#define ADC_INPUT 36
+#define ADC_INPUT 34 // 36 in old config
 
 /**
  * The voltage of your home, used to calculate the wattage.

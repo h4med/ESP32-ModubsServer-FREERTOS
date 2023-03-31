@@ -21,7 +21,7 @@ u16_t temperature_val_old;
 u16_t current_val = 0;
 u16_t watt_val = 0;
 //Used Pins
-const int ledPin = 25; //GPIO25
+const int ledPin = 25; //GPIO25, this is a LED on the dev-kit (on-board)
 
 //ModbusIP object
 ModbusIP mb;
