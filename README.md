@@ -1,5 +1,25 @@
 # Modbus Server
-The ESP32 is a Modbus-Server which measures Temperature and AC Current via two sensors.   
+In this project the ESP32 devkit is a Modbus-Server which measures Temperature and AC Current via two sensors. The program is written using FreeRTOS tasks.
+
+## Wifi Configuration
+In the `config\config.h` you can set the Wifi configuration for ESP32   
+```
+/**
+ * WiFi credentials   
+ */
+#define WIFI_NETWORK "------"
+#define WIFI_PASSWORD "******"
+```
+
+## Modus Registers
+Three Modbus Input Registers are defined with addresses 100, 101 and 102 as follows:   
+```
+const int Temp_IREG = 100;
+const int Current_IREG = 101;
+const int Watts_IREG = 102;
+```
+Every 100ms these registers are updated with `updateModbusRegs` task.   
+
 
 ## Schematic
 This is the schematic of the hardware:   
